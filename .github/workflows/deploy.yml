@@ -1,13 +1,14 @@
+name: Deploy to Firebase
+
 on:
   push:
     branches:
       - master
 
-env:
-  EXAMPLE_ENV: example    # set this to your application's name
-
 jobs:
   build:
+
+    name: Build task
 
     runs-on: ubuntu-latest
 
@@ -30,7 +31,9 @@ jobs:
         CI: true
 
   deploy:
-    name: Build and Deploy
+
+    name: Deploy task
+
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
