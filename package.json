@@ -1,0 +1,24 @@
+{
+  "name": "actions-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf _site && rollup -c && cp ./src/index.html _site",
+    "serve": "http-server _site -c0 -g",
+    "test": "karma start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.0",
+    "rollup-plugin-loadz0r": "^0.7.2",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
